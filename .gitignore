@@ -20,5 +20,6 @@ output/
 .classpath
 .svn
 .project
+*.pdf
 
 
