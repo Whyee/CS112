@@ -1,0 +1,15 @@
+PetFinder - readme
+
+This Application will allow the user to search for Pets in a given database,
+using attributes like type, breed, size, age, and where they are located.
+
+Please compile and execute the file called "Driver" to run the program,
+and follow the prompts given in the console to search for the desired pet.
+
+Though implementing GUI was an additional option in the assignment,
+due to time constraints I have decided to only submit a text-based project.
+
+--------------------------------------------------------------------------------------------
+Created Spring 2015 by Wesley Yee for a project in CS at the University of San Francisco
+Ideas and basic structure of the project provided by Prof. Olga Karpenko, USF CS Dept.
+Class: CS112-03

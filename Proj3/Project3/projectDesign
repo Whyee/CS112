@@ -1,0 +1,102 @@
+---------------------------------------------
+MyWorld Project Design Outline (Draft)
+
+Given starter code and driver classes will use this back-end framework to run to program.
+Due to many additions and updates, may not be completely correct. Certain small details and
+support code left out.
+Added Functionality (deviates from Assignment):
+	"Unlike" button
+	
+---------------------------------------------
+
+Class Post implements Comparable:
+	Imports Calendar class
+	Variables (private)
+		String text
+		Calendar time
+	Methods:
+		Post (String text) - constructor
+			creates the Post object with text and notes the time of creation
+		
+		public long getTime();
+		
+		public String toString();
+			to print the text in the post object.
+		
+		public int compareTo(Post p);
+			compares two posts by time created
+
+Class Profile:
+	Variables (protected)
+		String name
+		String type
+		String imageFile
+	Methods:
+		Profile (String n, String img); - constructor
+		getters/setters
+
+Class Person extends Profile
+	Variables (private)
+		ArrayList<Post> Statuses
+		ArrayList<String> Friends
+	Methods:
+		Person (String n, String img, String status, ArrayList<String> f); - constructor
+			creates ArrayLists and calls super constructor.
+
+		getters and setters for all vars above
+		
+		getFriends returns an iterator.
+		
+		Public void addFriend(String name);
+			adds a object of Person to the arrayList of friends
+
+		Public void addStatus(String s);
+			takes the String and creates a Post object to be stored in the list
+
+Class Organization extends Profile
+	Vars (private)
+		String address
+		String phone
+		ArrayList <Post> Announcements
+		int likeCounter
+		ArrayLIst <String> Supporters
+	
+	Methods:
+		Organization (String n, String img, String p, String a,
+			String announce, int count, ArrayList<String> support);
+			
+			calls super constructor on name and image
+			creates the announcements and supporters lists
+
+		getters and setters for all vars
+
+		Public void addSupporter( Person p);
+			adds a person to the list of supporters, increases counter by 1
+
+		Public void addAnnouncement(String a);
+			takes String and makes a post object, adding to announcement list
+			
+
+Class ProfileDatabase:
+	Variables (private)
+		HashMap<String, Profile> dt
+	
+	Methods:
+		Database ();
+			creates the database hashmap
+		
+		Public Profile search(String n);
+			Searches for a profile by using the name and comparing to keys
+		
+		Public void addFromFile(String file);
+		
+		Public ArrayList<Post> prepareNewsFeed(Person p);
+			takes a given person and prepares a news feed of posts
+			from the person and all the friends, sorted by time created
+			
+		Public void loginAsUser(Profile p)
+			"logs in" as specified user, allowing them to set statuses, etc by using the public methods of
+			Profile, Person, and Organization classes
+			
+
+		

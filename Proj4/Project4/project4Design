@@ -1,0 +1,58 @@
+-----------------------------------------------------------------------
+Project 4: Mp3 player.
+
+Initial design with classes, variables, and method signatures.
+Final design may change without this file being changed, as needs arise.
+-----------------------------------------------------------------------
+
+Class Song implements Comparable
+	private String name, artist, filePath, album
+	
+	Song(String n, String a, String f, String al);
+	
+	getters and setters
+	
+	public String toString();
+	
+	public int compareTo(Song other);
+
+Class Library
+	//handles the storing of songs, and library textFile i/o
+	
+	private ArrayList
+	//two are needed if searching by album
+	
+	Library();  //creates the HashMap
+	
+	public void inputFromDT();
+	//gets traverse method in DirectoryTraverser to add song files to file ArrayList
+	
+	public ArrayList<Song> search(String s);
+	//searches using applicable algorithm, by name, returns null if none
+	
+	public void loadLibrary(String file);
+	
+	public void saveLibrary(String fileName);
+	
+	public Iterator<Song> libraryIterator();
+		//allows the library to be iterated over but not directly changed
+
+Class PlayerThread extends Thread
+	
+	Player pl;
+	
+	PlayerThread(String fileName);
+	//will have to read more about this before writing
+
+Class DirectoryTraverser
+	import jAudiotagger (whatever real path is)
+	
+	//need to learn/read a little more about this	
+	//recursively traverses all files and subdirectories in mp3.
+	//pulls the tag info from the songs and pushes to Library via inputFromDT();
+
+Class MainPanel
+	//see starter code; other things will be added as needs arise.
+	
+	
+	
