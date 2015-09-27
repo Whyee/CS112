@@ -17,5 +17,8 @@ output/
 .settings/
 .metadata
 .recommenders/
+.classpath
+.svn
+.project
 
 
